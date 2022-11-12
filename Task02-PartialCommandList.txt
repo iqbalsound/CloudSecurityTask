@@ -1,0 +1,47 @@
+parted -l
+parted /dev/nvme0n2 mklabel msdos mkpart primary xfs 1M 10G
+parted /dev/nvme0n2 print
+cryptsetup luksFormat /dev/nvme0n2p1
+cryptsetup luksOpen /dev/nvme0n2p1  encryptednvme0n2p1
+ls /dev/mapper/encryptednvme0n2p1
+mkfs.xfs /dev/mapper/encryptednvme0n2p1
+mkdir /encrypted
+mount -t xfs /dev/mapper/encryptednvme0n2p1 /encrypted
+mount | grep /encrypted
+touch /encrypted/testfile
+umount /encrypted
+cryptsetup luksClose encryptednvme0n2p1
+yum install clevis clevis-luks clevis-dracut
+cfg=$'{"t":2,"pins":{"tang":[\n {"url":"192.168.1.214"},\n {"url":"192.168.1.172"}]}}'
+clevis luks bind -d /dev/nvme0n2p1 sss "$cfg
+systemctl enable clevis-luks-askpass.path
+vi /etc/crypttab encryptednvme0n2p1 /dev/vdb1 none _netdev
+vi /etc/fstab /dev/mapper/encryptednvme0n2p1 /encrypted xfs _netdev 1 2
+------------------------------
+Command History
+  128  parted -l
+  129  parted /dev/nvme0n2 mklabel msdos mkpart primary xfs 1M 10G
+  130  parted -l
+  131  lsblk
+  132  parted /dev/nvme0n2 print
+  133  cryptsetup luksFormat /dev/nvme0n2p1
+  134  lsblk
+  135  cryptsetup luksOpen /dev/nvme0n2p1  encryptednvme0n2p1
+  136  ls /dev/mapper/encryptednvme0n2p1
+  137  mkfs.xfs /dev/mapper/encryptednvme0n2p1
+  138  mkdir /encrypted
+  139  mount -t xfs /dev/mapper/encryptednvme0n2p1 /encrypted
+  140  mount | grep /encrypted
+  141  touch /encrypted/testfile
+  142  umount /encrypted
+  143  cryptsetup luksClose encryptednvme0n2p1
+  144  ls /dev/mapper/encryptednvme0n2p1
+  145  yum install clevis clevis-luks clevis-dracut
+  146  cfg=$'{"t":2,"pins":{"tang":[\n {"url":"192.168.1.214"},\n {"url":"192.168.1.172"}]}}'
+  147  clevis luks bind -d /dev/nvme0n2p1 sss "$cfg
+  148  clevis luks bind -d /dev/nvme0n2p1 sss "$cfg"
+  149  systemctl enable clevis-luks-askpass.path
+  150  clevis luks bind -d /dev/nvme0n2p1 sss "$cfg"
+  151  vi /etc/crypttab
+  152  vi /etc/fstab
+  153  history

@@ -1,0 +1,1199 @@
+iqbal@192.168.1.214's password:
+    +----------------------------------------------------------------------+
+    ¦                 • MobaXterm Personal Edition v22.1 •                 ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? SSH session to iqbal@192.168.1.214                                 ¦
+    ¦   • Direct SSH      :  ?                                             ¦
+    ¦   • SSH compression :  ?                                             ¦
+    ¦   • SSH-browser     :  ?                                             ¦
+    ¦   • X11-forwarding  :  ?  (disabled or not supported by server)      ¦
+    ¦                                                                      ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+Last login: Sat Nov 12 13:05:59 2022
+[iqbal@rocky02 ~]$ nano /etc/hostname
+[iqbal@rocky02 ~]$ sudo nano /etc/hostname
+[sudo] password for iqbal:
+iqbal is not in the sudoers file.  This incident will be reported.
+[iqbal@rocky02 ~]$ su
+Password:
+[root@rocky02 iqbal]# nano /etc/hostname
+[root@rocky02 iqbal]# nano /etc/hosts
+[root@rocky02 iqbal]# hostnamectl set-hostname ansible-node01
+[root@rocky02 iqbal]# hostnamectl
+ Static hostname: ansible-node01
+       Icon name: computer-vm
+         Chassis: vm ??
+      Machine ID: ef2c2016e5aa48ea842c555bd64f08d2
+         Boot ID: b43da07579f34ce696bd06567728b0f9
+  Virtualization: vmware
+Operating System: Rocky Linux 9.0 (Blue Onyx)
+     CPE OS Name: cpe:/o:rocky:rocky:9::baseos
+          Kernel: Linux 5.14.0-70.30.1.el9_0.x86_64
+    Architecture: x86-64
+ Hardware Vendor: VMware, Inc.
+  Hardware Model: VMware Virtual Platform
+[root@rocky02 iqbal]# exit
+exit
+[iqbal@rocky02 ~]$ su
+Password:
+[root@ansible-node01 iqbal]# nano /etc/motd
+[root@ansible-node01 iqbal]# exit
+exit
+[iqbal@rocky02 ~]$ nano /etc/passwd
+[iqbal@rocky02 ~]$ su
+Password:
+[root@ansible-node01 iqbal]# adduser ansible
+[root@ansible-node01 iqbal]# passwd ansible
+Changing password for user ansible.
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ansible-node01 iqbal]# exit
+exit
+[iqbal@rocky02 ~]$ su ansible
+Password:
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   20G  0 disk
+nvme0n3     259:4    0   20G  0 disk
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   20G  0 disk
+nvme0n3     259:4    0   20G  0 disk
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   20G  0 disk
+nvme0n3     259:4    0   20G  0 disk
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   20G  0 disk
+nvme0n3     259:4    0   20G  0 disk
+[ansible@ansible-node01 iqbal]$ sudo poweroff
+[sudo] password for ansible:
+
+Remote side unexpectedly closed network connection
+
+---------------------------------------------------------------------------------------------------
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+    +----------------------------------------------------------------------+
+    ¦                 • MobaXterm Personal Edition v22.1 •                 ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? SSH session to iqbal@192.168.1.214                                 ¦
+    ¦   • Direct SSH      :  ?                                             ¦
+    ¦   • SSH compression :  ?                                             ¦
+    ¦   • SSH-browser     :  ?                                             ¦
+    ¦   • X11-forwarding  :  ?  (disabled or not supported by server)      ¦
+    ¦                                                                      ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+-----------------------
+Rocky Linux
+Ansible Managed Node 01
+-----------------------
+Last login: Sat Nov 12 14:10:50 2022 from 192.168.1.172
+[iqbal@ansible-node01 ~]$ su ansible
+Password:
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   20G  0 disk
++-nvme0n2p1 259:6    0 18.6G  0 part
+nvme0n3     259:4    0   20G  0 disk
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   20G  0 disk
++-nvme0n2p1 259:6    0 18.6G  0 part
+nvme0n3     259:4    0   20G  0 disk
++-nvme0n3p1 259:7    0 18.6G  0 part
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   20G  0 disk
++-nvme0n2p1 259:6    0 18.6G  0 part
+nvme0n3     259:4    0   20G  0 disk
++-nvme0n3p1 259:5    0 18.6G  0 part
+[ansible@ansible-node01 iqbal]$ fdisk
+fdisk: bad usage
+Try 'fdisk --help' for more information.
+[ansible@ansible-node01 iqbal]$ fdisk nvme0n2
+
+Welcome to fdisk (util-linux 2.37.4).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+fdisk: cannot open nvme0n2: Permission denied
+[ansible@ansible-node01 iqbal]$ sudo fdisk nvme0n2
+[sudo] password for ansible:
+
+Welcome to fdisk (util-linux 2.37.4).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+fdisk: cannot open nvme0n2: No such file or directory
+[ansible@ansible-node01 iqbal]$ sudo fdisk nvme0n2p1
+
+Welcome to fdisk (util-linux 2.37.4).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+fdisk: cannot open nvme0n2p1: No such file or directory
+[ansible@ansible-node01 iqbal]$ su
+Password:
+[root@ansible-node01 iqbal]# fdisk nvme0n2p1
+
+Welcome to fdisk (util-linux 2.37.4).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+fdisk: cannot open nvme0n2p1: No such file or directory
+[root@ansible-node01 iqbal]# fdisk /dev/nvme0n2p1
+
+Welcome to fdisk (util-linux 2.37.4).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0x4a3b15ef.
+
+Command (m for help): m
+
+Help:
+
+  DOS (MBR)
+   a   toggle a bootable flag
+   b   edit nested BSD disklabel
+   c   toggle the dos compatibility flag
+
+  Generic
+   d   delete a partition
+   F   list free unpartitioned space
+   l   list known partition types
+   n   add a new partition
+   p   print the partition table
+   t   change a partition type
+   v   verify the partition table
+   i   print information about a partition
+
+  Misc
+   m   print this menu
+   u   change display/entry units
+   x   extra functionality (experts only)
+
+  Script
+   I   load disk layout from sfdisk script file
+   O   dump disk layout to sfdisk script file
+
+  Save & Exit
+   w   write table to disk and exit
+   q   quit without saving changes
+
+  Create a new label
+   g   create a new empty GPT partition table
+   G   create a new empty SGI (IRIX) partition table
+   o   create a new empty DOS partition table
+   s   create a new empty Sun partition table
+
+
+Command (m for help): d
+No partition is defined yet!
+
+Command (m for help): l
+
+00 Empty            24 NEC DOS          81 Minix / old Lin  bf Solaris
+01 FAT12            27 Hidden NTFS Win  82 Linux swap / So  c1 DRDOS/sec (FAT-
+02 XENIX root       39 Plan 9           83 Linux            c4 DRDOS/sec (FAT-
+03 XENIX usr        3c PartitionMagic   84 OS/2 hidden or   c6 DRDOS/sec (FAT-
+04 FAT16 <32M       40 Venix 80286      85 Linux extended   c7 Syrinx
+05 Extended         41 PPC PReP Boot    86 NTFS volume set  da Non-FS data
+06 FAT16            42 SFS              87 NTFS volume set  db CP/M / CTOS / .
+07 HPFS/NTFS/exFAT  4d QNX4.x           88 Linux plaintext  de Dell Utility
+08 AIX              4e QNX4.x 2nd part  8e Linux LVM        df BootIt
+09 AIX bootable     4f QNX4.x 3rd part  93 Amoeba           e1 DOS access
+0a OS/2 Boot Manag  50 OnTrack DM       94 Amoeba BBT       e3 DOS R/O
+0b W95 FAT32        51 OnTrack DM6 Aux  9f BSD/OS           e4 SpeedStor
+0c W95 FAT32 (LBA)  52 CP/M             a0 IBM Thinkpad hi  ea Linux extended
+0e W95 FAT16 (LBA)  53 OnTrack DM6 Aux  a5 FreeBSD          eb BeOS fs
+0f W95 Ext'd (LBA)  54 OnTrackDM6       a6 OpenBSD          ee GPT
+10 OPUS             55 EZ-Drive         a7 NeXTSTEP         ef EFI (FAT-12/16/
+11 Hidden FAT12     56 Golden Bow       a8 Darwin UFS       f0 Linux/PA-RISC b
+12 Compaq diagnost  5c Priam Edisk      a9 NetBSD           f1 SpeedStor
+14 Hidden FAT16 <3  61 SpeedStor        ab Darwin boot      f4 SpeedStor
+16 Hidden FAT16     63 GNU HURD or Sys  af HFS / HFS+       f2 DOS secondary
+17 Hidden HPFS/NTF  64 Novell Netware   b7 BSDI fs          fb VMware VMFS
+18 AST SmartSleep   65 Novell Netware   b8 BSDI swap        fc VMware VMKCORE
+1b Hidden W95 FAT3  70 DiskSecure Mult  bb Boot Wizard hid  fd Linux raid auto
+1c Hidden W95 FAT3  75 PC/IX            bc Acronis FAT32 L  fe LANstep
+1e Hidden W95 FAT1  80 Old Minix        be Solaris boot     ff BBT
+
+Aliases:
+   linux          - 83
+   swap           - 82
+   extended       - 05
+   uefi           - EF
+   raid           - FD
+   lvm            - 8E
+   linuxex        - 85
+
+Command (m for help): i
+No partition is defined yet!
+
+Command (m for help): F
+
+Unpartitioned space /dev/nvme0n2p1: 18.62 GiB, 19997392896 bytes, 39057408 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+
+Start      End  Sectors  Size
+ 2048 39059455 39057408 18.6G
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p):
+Command (m for help): p
+
+Disk /dev/nvme0n2p1: 18.63 GiB, 19998441472 bytes, 39059456 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x4a3b15ef
+
+Command (m for help): d
+No partition is defined yet!
+
+Command (m for help):
+All unwritten changes will be lost, do you really want to quit? quit
+
+[root@ansible-node01 iqbal]# exit
+exit
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   20G  0 disk
++-nvme0n2p1 259:6    0 18.6G  0 part
+nvme0n3     259:4    0   20G  0 disk
++-nvme0n3p1 259:7    0 18.6G  0 part
+[ansible@ansible-node01 iqbal]$ ls /etc
+adjtime                  fstab           lvm                       rwtab.d
+aliases                  fuse.conf       machine-id                sasl2
+alternatives             gcrypt          magic                     security
+anacrontab               gnupg           makedumpfile.conf.sample  selinux
+audit                    GREP_COLORS     man_db.conf               services
+authselect               groff           microcode_ctl             sestatus.conf
+bash_completion.d        group           mke2fs.conf               shadow
+bashrc                   group-          modprobe.d                shadow-
+binfmt.d                 grub2.cfg       modules-load.d            shells
+ceph                     grub.d          motd                      skel
+chrony.conf              gshadow         motd.d                    ssh
+chrony.keys              gshadow-        mtab                      ssl
+cifs-utils               gss             nanorc                    sssd
+cni                      host.conf       NetworkManager            statetab.d
+containerd               hostname        networks                  subgid
+cron.d                   hosts           nftables                  subgid-
+cron.daily               inittab         nsswitch.conf             subuid
+cron.deny                inputrc         nsswitch.conf.bak         subuid-
+cron.hourly              iproute2        openldap                  sudo.conf
+cron.monthly             issue           opt                       sudoers
+crontab                  issue.d         os-release                sudoers.d
+cron.weekly              issue.net       pam.d                     sudo-ldap.conf
+crypto-policies          kdump           passwd                    sysconfig
+crypttab                 kdump.conf      passwd-                   sysctl.conf
+csh.cshrc                kernel          pkcs11                    sysctl.d
+csh.login                krb5.conf       pki                       systemd
+dbus-1                   krb5.conf.d     pm                        system-release
+default                  kubernetes      popt.d                    system-release-cpe
+depmod.d                 ld.so.cache     printcap                  terminfo
+dhcp                     ld.so.conf      profile                   tmpfiles.d
+DIR_COLORS               ld.so.conf.d    profile.d                 tpm2-tss
+DIR_COLORS.lightbgcolor  libaudit.conf   protocols                 udev
+dnf                      libibverbs.d    rc.d                      vconsole.conf
+docker                   libnl           rc.local                  virc
+dracut.conf              libreport       redhat-release            wgetrc
+dracut.conf.d            libssh          resolv.conf               X11
+environment              libuser.conf    rocky-release             xattr.conf
+ethertypes               locale.conf     rocky-release-upstream    xdg
+exports                  localtime       rpc                       yum
+filesystems              login.defs      rpm                       yum.conf
+firewalld                logrotate.conf  rsyslog.conf              yum.repos.d
+fonts                    logrotate.d     rsyslog.d
+[ansible@ansible-node01 iqbal]$ ls /
+afs  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin  dev   home  lib64  mnt    proc  run   srv   tmp  var
+[ansible@ansible-node01 iqbal]$ /mnt
+bash: /mnt: Is a directory
+[ansible@ansible-node01 iqbal]$ ls /mnt
+[ansible@ansible-node01 iqbal]$ ls /dev/
+autofs           fuse          null       sg0       tty18  tty35  tty52  ttyS3    vcsa6
+block            hidraw0       nvme0      shm       tty19  tty36  tty53  uhid     vcsu
+bsg              hpet          nvme0n1    snapshot  tty2   tty37  tty54  uinput   vcsu1
+bus              hugepages     nvme0n1p1  snd       tty20  tty38  tty55  urandom  vcsu2
+cdrom            hwrng         nvme0n1p2  sr0       tty21  tty39  tty56  usbmon0  vcsu3
+char             initctl       nvme0n2    stderr    tty22  tty4   tty57  usbmon1  vcsu4
+console          input         nvme0n2p1  stdin     tty23  tty40  tty58  vcs      vcsu5
+core             kmsg          nvme0n3    stdout    tty24  tty41  tty59  vcs1     vcsu6
+cpu              log           nvme0n3p1  tty       tty25  tty42  tty6   vcs2     vfio
+cpu_dma_latency  loop-control  nvram      tty0      tty26  tty43  tty60  vcs3     vga_arbiter
+disk             mapper        port       tty1      tty27  tty44  tty61  vcs4     vhci
+dm-0             mcelog        ppp        tty10     tty28  tty45  tty62  vcs5     vhost-net
+dm-1             mem           ptmx       tty11     tty29  tty46  tty63  vcs6     vhost-vsock
+dma_heap         midi          pts        tty12     tty3   tty47  tty7   vcsa     vmci
+dmmidi           mqueue        random     tty13     tty30  tty48  tty8   vcsa1    zero
+dri              net           rfkill     tty14     tty31  tty49  tty9   vcsa2
+fb0              ng0n1         rl         tty15     tty32  tty5   ttyS0  vcsa3
+fd               ng0n2         rtc        tty16     tty33  tty50  ttyS1  vcsa4
+full             ng0n3         rtc0       tty17     tty34  tty51  ttyS2  vcsa5
+[ansible@ansible-node01 iqbal]$ ls /mnt
+iqbal_1
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME                   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                     11:0    1 1024M  0 rom
+nvme0n1                259:0    0   40G  0 disk
++-nvme0n1p1            259:1    0    1G  0 part /boot
++-nvme0n1p2            259:2    0   39G  0 part
+  +-rl-root            253:0    0   37G  0 lvm  /
+  +-rl-swap            253:1    0    2G  0 lvm  [SWAP]
+nvme0n2                259:3    0   20G  0 disk
++-nvme0n2p1            259:6    0 18.6G  0 part
+  +-assignment-LVAsign 253:2    0 18.6G  0 lvm  /mnt/iqbal_1
+nvme0n3                259:4    0   20G  0 disk
++-nvme0n3p1            259:7    0 18.6G  0 part
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME                   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                     11:0    1 1024M  0 rom
+nvme0n1                259:0    0   40G  0 disk
++-nvme0n1p1            259:1    0    1G  0 part /boot
++-nvme0n1p2            259:2    0   39G  0 part
+  +-rl-root            253:0    0   37G  0 lvm  /
+  +-rl-swap            253:1    0    2G  0 lvm  [SWAP]
+nvme0n2                259:3    0   20G  0 disk
++-nvme0n2p1            259:6    0 18.6G  0 part
+  +-assignment-LVAsign 253:2    0 18.6G  0 lvm  /mnt/iqbal_1
+nvme0n3                259:4    0   20G  0 disk
++-nvme0n3p1            259:7    0 18.6G  0 part
+  +-iqbal_2-iqbal_2    253:3    0 18.6G  0 lvm  /mnt/iqbal_2
+[ansible@ansible-node01 iqbal]$ cryptsetup luksFormat
+bash: cryptsetup: command not found
+[ansible@ansible-node01 iqbal]$ lsblk
+NAME                   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                     11:0    1 1024M  0 rom
+nvme0n1                259:0    0   40G  0 disk
++-nvme0n1p1            259:1    0    1G  0 part /boot
++-nvme0n1p2            259:2    0   39G  0 part
+  +-rl-root            253:0    0   37G  0 lvm  /
+  +-rl-swap            253:1    0    2G  0 lvm  [SWAP]
+nvme0n2                259:3    0   20G  0 disk
++-nvme0n2p1            259:6    0 18.6G  0 part
+  +-assignment-LVAsign 253:2    0 18.6G  0 lvm  /mnt/iqbal_1
+nvme0n3                259:4    0   20G  0 disk
++-nvme0n3p1            259:7    0 18.6G  0 part
+  +-iqbal_2-iqbal_2    253:3    0 18.6G  0 lvm  /mnt/iqbal_2
+[ansible@ansible-node01 iqbal]$ parted -l
+/dev/mapper/control: open failed: Permission denied
+Failure to communicate with kernel device-mapper driver.
+Incompatible libdevmapper 1.02.183-git (2021-10-20) and kernel driver (unknown version).
+[ansible@ansible-node01 iqbal]$ su
+Password:
+[root@ansible-node01 iqbal]# parted -l
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n1: 42.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  1075MB  1074MB  primary  xfs          boot
+ 2      1075MB  42.9GB  41.9GB  primary               lvm
+
+
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n2: 21.5GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  20.0GB  20.0GB  primary               lvm
+
+
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n3: 21.5GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  20.0GB  20.0GB  primary               lvm
+
+
+[root@ansible-node01 iqbal]# parted /dev/nvme0n3
+GNU Parted 3.4
+Using /dev/nvme0n3
+Welcome to GNU Parted! Type 'help' to view a list of commands.
+(parted) q
+[root@ansible-node01 iqbal]# parted /dev/nvme0n3 mklabel msdos mkpart primary xfs 1M 10G
+Warning: The existing disk label on /dev/nvme0n3 will be destroyed and all data on this disk will
+be lost. Do you want to continue?
+Yes/No? yes
+Error: Partition(s) 1 on /dev/nvme0n3 have been written, but we have been unable to inform the
+kernel of the change, probably because it/they are in use.  As a result, the old partition(s) will
+remain in use.  You should reboot now before making further changes.
+Ignore/Cancel? i
+Information: You may need to update /etc/fstab.
+
+[root@ansible-node01 iqbal]# fstab
+bash: fstab: command not found
+[root@ansible-node01 iqbal]# lsblk
+NAME                   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                     11:0    1 1024M  0 rom
+nvme0n1                259:0    0   40G  0 disk
++-nvme0n1p1            259:1    0    1G  0 part /boot
++-nvme0n1p2            259:2    0   39G  0 part
+  +-rl-root            253:0    0   37G  0 lvm  /
+  +-rl-swap            253:1    0    2G  0 lvm  [SWAP]
+nvme0n2                259:3    0   20G  0 disk
++-nvme0n2p1            259:6    0 18.6G  0 part
+  +-assignment-LVAsign 253:2    0 18.6G  0 lvm  /mnt/iqbal_1
+nvme0n3                259:4    0   20G  0 disk
++-nvme0n3p1            259:7    0 18.6G  0 part
+  +-iqbal_2-iqbal_2    253:3    0 18.6G  0 lvm  /mnt/iqbal_2
+[root@ansible-node01 iqbal]# exit
+exit
+[ansible@ansible-node01 iqbal]$ exit
+exit
+[iqbal@ansible-node01 ~]$ sudo poweroff
+[sudo] password for iqbal:
+
+Remote side unexpectedly closed network connection
+
+---------------------------------------------------------------------------------------------------
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+
+Network error: Connection timed out
+
+---------------------------------------------------------------------------------------------------
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+    +----------------------------------------------------------------------+
+    ¦                 • MobaXterm Personal Edition v22.1 •                 ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? SSH session to iqbal@192.168.1.214                                 ¦
+    ¦   • Direct SSH      :  ?                                             ¦
+    ¦   • SSH compression :  ?                                             ¦
+    ¦   • SSH-browser     :  ?                                             ¦
+    ¦   • X11-forwarding  :  ?  (disabled or not supported by server)      ¦
+    ¦                                                                      ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+Last login: Sat Nov 12 20:33:29 2022
+[iqbal@rocky02 ~]$ su
+Password:
+[root@rocky02 iqbal]# nano /etc/hosts
+[root@rocky02 iqbal]# nano /etc/hostname
+[root@rocky02 iqbal]# hostnamectl set-hostname ansible-node01
+[root@rocky02 iqbal]# dnf update
+Rocky Linux 9 - BaseOS                                             1.1 kB/s | 3.6 kB     00:03
+Rocky Linux 9 - AppStream                                          2.0 kB/s | 3.6 kB     00:01
+Rocky Linux 9 - Extras                                             1.6 kB/s | 2.9 kB     00:01
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@rocky02 iqbal]# dnf install cryptsetup tang
+Last metadata expiration check: 0:00:26 ago on Sat 12 Nov 2022 08:36:29 PM PKT.
+Dependencies resolved.
+===================================================================================================
+ Package                Architecture      Version                       Repository            Size
+===================================================================================================
+Installing:
+ cryptsetup             x86_64            2.4.3-4.el9_0.1               baseos               199 k
+ tang                   x86_64            11-1.el9                      appstream             43 k
+Installing dependencies:
+ http-parser            x86_64            2.9.4-6.el9                   appstream             37 k
+ jose                   x86_64            11-3.el9                      appstream             67 k
+ libjose                x86_64            11-3.el9                      appstream             64 k
+
+Transaction Summary
+===================================================================================================
+Install  5 Packages
+
+Total download size: 410 k
+Installed size: 1.0 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/5): tang-11-1.el9.x86_64.rpm                                     27 kB/s |  43 kB     00:01
+(2/5): http-parser-2.9.4-6.el9.x86_64.rpm                           22 kB/s |  37 kB     00:01
+(3/5): libjose-11-3.el9.x86_64.rpm                                 109 kB/s |  64 kB     00:00
+(4/5): jose-11-3.el9.x86_64.rpm                                    112 kB/s |  67 kB     00:00
+(5/5): cryptsetup-2.4.3-4.el9_0.1.x86_64.rpm                        53 kB/s | 199 kB     00:03
+---------------------------------------------------------------------------------------------------
+Total                                                               59 kB/s | 410 kB     00:06
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                           1/1
+  Installing       : libjose-11-3.el9.x86_64                                                   1/5
+  Installing       : jose-11-3.el9.x86_64                                                      2/5
+  Installing       : http-parser-2.9.4-6.el9.x86_64                                            3/5
+  Running scriptlet: tang-11-1.el9.x86_64                                                      4/5
+  Installing       : tang-11-1.el9.x86_64                                                      4/5
+  Running scriptlet: tang-11-1.el9.x86_64                                                      4/5
+  Installing       : cryptsetup-2.4.3-4.el9_0.1.x86_64                                         5/5
+  Running scriptlet: cryptsetup-2.4.3-4.el9_0.1.x86_64                                         5/5
+  Verifying        : cryptsetup-2.4.3-4.el9_0.1.x86_64                                         1/5
+  Verifying        : http-parser-2.9.4-6.el9.x86_64                                            2/5
+  Verifying        : tang-11-1.el9.x86_64                                                      3/5
+  Verifying        : libjose-11-3.el9.x86_64                                                   4/5
+  Verifying        : jose-11-3.el9.x86_64                                                      5/5
+
+Installed:
+  cryptsetup-2.4.3-4.el9_0.1.x86_64     http-parser-2.9.4-6.el9.x86_64     jose-11-3.el9.x86_64
+  libjose-11-3.el9.x86_64               tang-11-1.el9.x86_64
+
+Complete!
+[root@rocky02 iqbal]# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   10G  0 disk
+nvme0n3     259:4    0   10G  0 disk
+[root@rocky02 iqbal]# exit
+exit
+[iqbal@rocky02 ~]$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+systemd-coredump:x:999:997:systemd Core Dumper:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+tss:x:59:59:Account used for TPM access:/dev/null:/sbin/nologin
+sssd:x:998:995:User for sssd:/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/sbin/nologin
+chrony:x:997:994::/var/lib/chrony:/sbin/nologin
+systemd-oom:x:992:992:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+iqbal:x:1000:1000::/home/iqbal:/bin/bash
+tang:x:991:990:Tang Network Presence Daemon user:/var/cache/tang:/sbin/nologin
+[iqbal@rocky02 ~]$ su
+Password:
+[root@ansible-node01 iqbal]# useradd ansible
+[root@ansible-node01 iqbal]# passwd ansible
+Changing password for user ansible.
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ansible-node01 iqbal]# nano /etc/sudoers
+[root@ansible-node01 iqbal]# nano /etc/sudoers
+[root@ansible-node01 iqbal]# exit
+exit
+[iqbal@rocky02 ~]$ sudo reboot
+[sudo] password for iqbal:
+
+Remote side unexpectedly closed network connection
+
+---------------------------------------------------------------------------------------------------
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+    +----------------------------------------------------------------------+
+    ¦                 • MobaXterm Personal Edition v22.1 •                 ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? SSH session to iqbal@192.168.1.214                                 ¦
+    ¦   • Direct SSH      :  ?                                             ¦
+    ¦   • SSH compression :  ?                                             ¦
+    ¦   • SSH-browser     :  ?                                             ¦
+    ¦   • X11-forwarding  :  ?  (disabled or not supported by server)      ¦
+    ¦                                                                      ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+Last login: Sat Nov 12 20:33:47 2022 from 192.168.1.253
+[iqbal@ansible-node01 ~]$ parted -l
+/dev/mapper/control: open failed: Permission denied
+Failure to communicate with kernel device-mapper driver.
+Incompatible libdevmapper 1.02.183-git (2021-10-20) and kernel driver (unknown version).
+[iqbal@ansible-node01 ~]$ su
+Password:
+[root@ansible-node01 iqbal]# parted -l
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n1: 42.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  1075MB  1074MB  primary  xfs          boot
+ 2      1075MB  42.9GB  41.9GB  primary               lvm
+
+
+Error: /dev/nvme0n2: unrecognised disk label
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n2: 10.7GB
+Sector size (logical/physical): 512B/512B
+Partition Table: unknown
+Disk Flags:
+
+Error: /dev/nvme0n3: unrecognised disk label
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n3: 10.7GB
+Sector size (logical/physical): 512B/512B
+Partition Table: unknown
+Disk Flags:
+
+[root@ansible-node01 iqbal]# parted /dev/nvme0n2 mklabel msdos mkpart primary xfs 1M 10G
+Information: You may need to update /etc/fstab.
+
+[root@ansible-node01 iqbal]# parted -l
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n1: 42.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  1075MB  1074MB  primary  xfs          boot
+ 2      1075MB  42.9GB  41.9GB  primary               lvm
+
+
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n2: 10.7GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  10.0GB  9999MB  primary
+
+
+Error: /dev/nvme0n3: unrecognised disk label
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n3: 10.7GB
+Sector size (logical/physical): 512B/512B
+Partition Table: unknown
+Disk Flags:
+
+[root@ansible-node01 iqbal]# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   10G  0 disk
++-nvme0n2p1 259:5    0  9.3G  0 part
+nvme0n3     259:4    0   10G  0 disk
+[root@ansible-node01 iqbal]# parted /dev/nvme0n2 print
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n2: 10.7GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  10.0GB  9999MB  primary
+
+[root@ansible-node01 iqbal]# cryptsetup luksFormat /dev/nvme0n2p1
+
+WARNING!
+========
+This will overwrite data on /dev/nvme0n2p1 irrevocably.
+
+Are you sure? (Type 'yes' in capital letters): yes
+Operation aborted.
+
+[root@ansible-node01 iqbal]# cryptsetup luksFormat /dev/nvme0n2p1
+
+WARNING!
+========
+This will overwrite data on /dev/nvme0n2p1 irrevocably.
+
+Are you sure? (Type 'yes' in capital letters): YES
+Enter passphrase for /dev/nvme0n2p1:
+Verify passphrase:
+Password quality check failed:
+ The password is shorter than 8 characters
+[root@ansible-node01 iqbal]# cryptsetup luksFormat /dev/nvme0n2p1
+
+WARNING!
+========
+This will overwrite data on /dev/nvme0n2p1 irrevocably.
+
+Are you sure? (Type 'yes' in capital letters): YES
+Enter passphrase for /dev/nvme0n2p1:
+Verify passphrase:
+Passphrases do not match.
+[root@ansible-node01 iqbal]# cryptsetup luksFormat /dev/nvme0n2p1
+
+WARNING!
+========
+This will overwrite data on /dev/nvme0n2p1 irrevocably.
+
+Are you sure? (Type 'yes' in capital letters): YES
+Enter passphrase for /dev/nvme0n2p1:
+Verify passphrase:
+Password quality check failed:
+ The password fails the dictionary check - it is based on a dictionary word
+[root@ansible-node01 iqbal]# cryptsetup luksFormat /dev/nvme0n2p1
+
+WARNING!
+========
+This will overwrite data on /dev/nvme0n2p1 irrevocably.
+
+Are you sure? (Type 'yes' in capital letters): YES
+Enter passphrase for /dev/nvme0n2p1:
+Verify passphrase:
+[root@ansible-node01 iqbal]# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   10G  0 disk
++-nvme0n2p1 259:5    0  9.3G  0 part
+nvme0n3     259:4    0   10G  0 disk
+[root@ansible-node01 iqbal]# cryptsetup luksOpen /dev/nvme0n2p1  encryptednvme0n2p1
+Enter passphrase for /dev/nvme0n2p1:
+[root@ansible-node01 iqbal]# ls /dev/mapper/encryptednvme0n2p1
+/dev/mapper/encryptednvme0n2p1
+[root@ansible-node01 iqbal]# mkfs.xfs /dev/mapper/encryptednvme0n2p1
+meta-data=/dev/mapper/encryptednvme0n2p1 isize=512    agcount=4, agsize=609280 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1    bigtime=1 inobtcount=1
+data     =                       bsize=4096   blocks=2437120, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[root@ansible-node01 iqbal]# mkdir /encrypted
+[root@ansible-node01 iqbal]# mount -t xfs /dev/mapper/encryptednvme0n2p1 /encrypted
+[root@ansible-node01 iqbal]# mount | grep /encrypted
+/dev/mapper/encryptednvme0n2p1 on /encrypted type xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+[root@ansible-node01 iqbal]# touch /encrypted/testfile
+[root@ansible-node01 iqbal]# umount /encrypted
+[root@ansible-node01 iqbal]# cryptsetup luksClose encryptednvme0n2p1
+[root@ansible-node01 iqbal]# ls /dev/mapper/encryptednvme0n2p1
+ls: cannot access '/dev/mapper/encryptednvme0n2p1': No such file or directory
+[root@ansible-node01 iqbal]# yum install clevis clevis-luks clevis-dracut
+Last metadata expiration check: 0:16:39 ago on Sat 12 Nov 2022 08:36:29 PM PKT.
+Dependencies resolved.
+===================================================================================================
+ Package                   Architecture      Version                    Repository            Size
+===================================================================================================
+Installing:
+ clevis                    x86_64            18-102.el9                 appstream             56 k
+ clevis-dracut             x86_64            18-102.el9                 appstream             12 k
+ clevis-luks               x86_64            18-102.el9                 appstream             35 k
+Installing dependencies:
+ clevis-systemd            x86_64            18-102.el9                 appstream             12 k
+ jq                        x86_64            1.6-12.el9                 appstream            186 k
+ libluksmeta               x86_64            9-12.el9                   appstream             25 k
+ luksmeta                  x86_64            9-12.el9                   appstream             21 k
+ oniguruma                 x86_64            6.9.6-1.el9.5              appstream            217 k
+ tpm2-tools                x86_64            5.0-10.el9                 baseos               722 k
+
+Transaction Summary
+===================================================================================================
+Install  9 Packages
+
+Total download size: 1.3 M
+Installed size: 2.9 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/9): clevis-systemd-18-102.el9.x86_64.rpm                         27 kB/s |  12 kB     00:00
+(2/9): clevis-luks-18-102.el9.x86_64.rpm                           122 kB/s |  35 kB     00:00
+(3/9): jq-1.6-12.el9.x86_64.rpm                                    218 kB/s | 186 kB     00:00
+(4/9): clevis-dracut-18-102.el9.x86_64.rpm                          89 kB/s |  12 kB     00:00
+(5/9): clevis-18-102.el9.x86_64.rpm                                320 kB/s |  56 kB     00:00
+(6/9): oniguruma-6.9.6-1.el9.5.x86_64.rpm                          399 kB/s | 217 kB     00:00
+(7/9): libluksmeta-9-12.el9.x86_64.rpm                             137 kB/s |  25 kB     00:00
+(8/9): luksmeta-9-12.el9.x86_64.rpm                                 20 kB/s |  21 kB     00:01
+(9/9): tpm2-tools-5.0-10.el9.x86_64.rpm                            122 kB/s | 722 kB     00:05
+---------------------------------------------------------------------------------------------------
+Total                                                              139 kB/s | 1.3 MB     00:09
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                           1/1
+  Installing       : libluksmeta-9-12.el9.x86_64                                               1/9
+  Installing       : luksmeta-9-12.el9.x86_64                                                  2/9
+  Installing       : oniguruma-6.9.6-1.el9.5.x86_64                                            3/9
+  Installing       : jq-1.6-12.el9.x86_64                                                      4/9
+  Installing       : tpm2-tools-5.0-10.el9.x86_64                                              5/9
+  Running scriptlet: clevis-18-102.el9.x86_64                                                  6/9
+  Installing       : clevis-18-102.el9.x86_64                                                  6/9
+  Installing       : clevis-luks-18-102.el9.x86_64                                             7/9
+  Installing       : clevis-systemd-18-102.el9.x86_64                                          8/9
+  Installing       : clevis-dracut-18-102.el9.x86_64                                           9/9
+  Running scriptlet: clevis-18-102.el9.x86_64                                                  9/9
+  Running scriptlet: clevis-dracut-18-102.el9.x86_64                                           9/9
+  Verifying        : tpm2-tools-5.0-10.el9.x86_64                                              1/9
+  Verifying        : jq-1.6-12.el9.x86_64                                                      2/9
+  Verifying        : clevis-systemd-18-102.el9.x86_64                                          3/9
+  Verifying        : clevis-luks-18-102.el9.x86_64                                             4/9
+  Verifying        : clevis-dracut-18-102.el9.x86_64                                           5/9
+  Verifying        : clevis-18-102.el9.x86_64                                                  6/9
+  Verifying        : oniguruma-6.9.6-1.el9.5.x86_64                                            7/9
+  Verifying        : luksmeta-9-12.el9.x86_64                                                  8/9
+  Verifying        : libluksmeta-9-12.el9.x86_64                                               9/9
+
+Installed:
+  clevis-18-102.el9.x86_64          clevis-dracut-18-102.el9.x86_64  clevis-luks-18-102.el9.x86_64
+  clevis-systemd-18-102.el9.x86_64  jq-1.6-12.el9.x86_64             libluksmeta-9-12.el9.x86_64
+  luksmeta-9-12.el9.x86_64          oniguruma-6.9.6-1.el9.5.x86_64   tpm2-tools-5.0-10.el9.x86_64
+
+Complete!
+[root@ansible-node01 iqbal]# cfg=$'{"t":2,"pins":{"tang":[\n {"url":"192.168.1.214"},\n {"url":"192.168.1.172"}]}}'
+[root@ansible-node01 iqbal]# clevis luks bind -d /dev/nvme0n2p1 sss "$cfg
+> ^C
+[root@ansible-node01 iqbal]# clevis luks bind -d /dev/nvme0n2p1 sss "$cfg"
+Enter existing LUKS password:
+Warning: Value 512 is outside of the allowed entropy range, adjusting it.
+Unable to fetch advertisement: '192.168.1.214/adv/'!
+Invalid input!
+Usage: jose jwe fmt -i JWE [-I CT] [-o JWE] [-O CT] [-c]
+
+Converts a JWE between serialization formats
+
+  -i JSON --input=JSON     Parse JWE from JSON
+  -i FILE --input=FILE     Read JWE from FILE
+  -i -    --input=-        Read JWE from standard input
+
+  -I FILE --detached=FILE  Read decoded ciphertext from FILE
+  -I -    --detached=-     Read decoded ciphertext from standard input
+
+  -o JSON --output=JSON    Parse JWE from JSON
+  -o FILE --output=FILE    Read JWE from FILE
+  -o -    --output=-       Read JWE from standard input
+                           Default: "-"
+
+  -O JSON --detach=JSON    Parse JWE from JSON
+  -O FILE --detach=FILE    Read JWE from FILE
+  -O -    --detach=-       Read JWE from standard input
+
+  -c      --compact        Output JWE using compact serialization
+
+Failed to import token from file.
+Error saving metadata to LUKS2 header in device /dev/nvme0n2p1
+Unable to update metadata; operation cancelled
+Error adding new binding to /dev/nvme0n2p1
+[root@ansible-node01 iqbal]# systemctl enable clevis-luks-askpass.path
+Created symlink /etc/systemd/system/cryptsetup.target.wants/clevis-luks-askpass.path ? /usr/lib/systemd/system/clevis-luks-askpass.path.
+[root@ansible-node01 iqbal]# clevis luks bind -d /dev/nvme0n2p1 sss "$cfg"
+Enter existing LUKS password:
+Warning: Value 512 is outside of the allowed entropy range, adjusting it.
+Unable to fetch advertisement: '192.168.1.214/adv/'!
+Invalid input!
+Usage: jose jwe fmt -i JWE [-I CT] [-o JWE] [-O CT] [-c]
+
+Converts a JWE between serialization formats
+
+  -i JSON --input=JSON     Parse JWE from JSON
+  -i FILE --input=FILE     Read JWE from FILE
+  -i -    --input=-        Read JWE from standard input
+
+  -I FILE --detached=FILE  Read decoded ciphertext from FILE
+  -I -    --detached=-     Read decoded ciphertext from standard input
+
+  -o JSON --output=JSON    Parse JWE from JSON
+  -o FILE --output=FILE    Read JWE from FILE
+  -o -    --output=-       Read JWE from standard input
+                           Default: "-"
+
+  -O JSON --detach=JSON    Parse JWE from JSON
+  -O FILE --detach=FILE    Read JWE from FILE
+  -O -    --detach=-       Read JWE from standard input
+
+  -c      --compact        Output JWE using compact serialization
+
+Failed to import token from file.
+Error saving metadata to LUKS2 header in device /dev/nvme0n2p1
+Unable to update metadata; operation cancelled
+Error adding new binding to /dev/nvme0n2p1
+[root@ansible-node01 iqbal]# vi /etc/crypttab
+[root@ansible-node01 iqbal]# vi /etc/fstab
+[root@ansible-node01 iqbal]# history
+    1  exit
+    2  yum update
+    3  ip a s
+    4  poeroff
+    5  poweroff
+    6  su iqbal
+    7  hostname rocky00
+    8  yum install nano
+    9  nano /etc/hostname
+   10  nano /etc/hostnames
+   11  whereis hostname
+   12  nano /etc/hostname
+   13  nano /etc/hosts
+   14  cat etc/hosts
+   15  cat /etc/hosts
+   16  nano /etc/hosts
+   17  cat /etc/hosts
+   18  hostname
+   19  exit
+   20  ls
+   21  dnf
+   22  dnf update
+   23  dnf search docker
+   24  adduser iqbal
+   25  passwd iqbal
+   26  su iqbal
+   27  sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   28  sudo dnf -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   29  docker
+   30  su
+   31  exit
+   32  yum update
+   33  ls
+   34  yum search docker
+   35  docker
+   36  ip a s
+   37  reboot
+   38  ping rocky00
+   39  systemctl restart systemd-hostnamed
+   40  docker run --privileged -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
+   41  sudo systemctl --now enable docker
+   42  systemctl status docker
+   43  docker run --privileged -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
+   44  docker container ls -a
+   45  docker container stop 75ef9ba12221
+   46  docker container ls -a
+   47  docker run  -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
+   48  docker container ls -a
+   49  docker container stop 028db47c2cb6
+   50  net.bridge.bridge-nf-call-iptables=1
+   51  hostname
+   52  cat /ect/hosts
+   53  cat /etc/hosts
+   54  ping rocky00
+   55  cat /etc/hosts
+   56  hosname
+   57  hostname
+   58  nano /etc/hosts
+   59  cat /etc/hosts
+   60  exit
+   61  reboot
+   62  ip a s
+   63  cat /etc/hosts
+   64  hostnamectl
+   65  hostnamectl sethostname rocky00
+   66  hostnamectl set-hostname rocky00
+   67  cat /etc/hosts
+   68  ls /etc/hostname
+   69  nano /etc/hostname
+   70  systemctl restat systemd-hostnamed
+   71  systemctl restart systemd-hostnamed
+   72  ping rocky00
+   73  hostnamectl
+   74  reboot
+   75  nano HowToChangeHostname
+   76  clear
+   77  docker run --privileged -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
+   78  docker container ls -a
+   79  ping rocky00
+   80  ip a s
+   81  root
+   82  docker container ls -a
+   83  docker container ls -a
+   84  docker container stop 829a04408987
+   85  docker container ls -a
+   86  docker container rm -a
+   87  docker container rm help
+   88  docker container rm --help
+   89  docker container rm -v
+   90  docker container rm 75ef9ba12221 028db47c2cb6 829a04408987
+   91  docker container ls -a
+   92  poweroff
+   93  hostnamectl set-hostname rocky02
+   94  nano /etc/hostname
+   95  nano /etc/hosts
+   96  systemctl restart systemd-hostnamed
+   97  hostnamectl set-hostname rocky02
+   98  hostnamectl
+   99  reboot
+  100  sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.6.8 --server https://192.168.1.253 --token c4dn44gv4ct7w2vjdbc8jzhggf27mtlxldfmb79z7rr6f4nfkwjm99 --ca-checksum 41eb8cb7dbbdc56571a4bc7f03b0d436f6fb9ec2529bc479f1bd65dc8eacc7b3 --worker
+  101  ifconfig
+  102  ip a s
+  103  poweroff
+  104  ip a s
+  105  sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.6.9 --server https://192.168.1.254 --token 66j86wpn6clj84ksnz57qd2dvm8p88clkfc9b9rwbx4lqxnpf5qmkw --ca-checksum 1a91bbe661acb9e678acbcf93e16eec0ca427d4cce5ffa2022dc8893107aa9cb --worker
+  106  poweroff
+  107  docker ps
+  108  docker kill $(docker ps -q)
+  109  docker rm -f $(docker ps -a -q)
+  110  docker rmi -f $(docker ps -a -q)
+  111  docker rmi $(docker ps -a -q)
+  112  docker rmi $(docker images -a -q)
+  113  docker images
+  114  docker ps -a
+  115  dnf update
+  116  poweroff
+  117  nano /etc/hosts
+  118  nano /etc/hostname
+  119  hostnamectl set-hostname ansible-node01
+  120  dnf update
+  121  dnf install cryptsetup tang
+  122  lsblk
+  123  exit
+  124  useradd ansible
+  125  passwd ansible
+  126  nano /etc/sudoers
+  127  exit
+  128  parted -l
+  129  parted /dev/nvme0n2 mklabel msdos mkpart primary xfs 1M 10G
+  130  parted -l
+  131  lsblk
+  132  parted /dev/nvme0n2 print
+  133  cryptsetup luksFormat /dev/nvme0n2p1
+  134  lsblk
+  135  cryptsetup luksOpen /dev/nvme0n2p1  encryptednvme0n2p1
+  136  ls /dev/mapper/encryptednvme0n2p1
+  137  mkfs.xfs /dev/mapper/encryptednvme0n2p1
+  138  mkdir /encrypted
+  139  mount -t xfs /dev/mapper/encryptednvme0n2p1 /encrypted
+  140  mount | grep /encrypted
+  141  touch /encrypted/testfile
+  142  umount /encrypted
+  143  cryptsetup luksClose encryptednvme0n2p1
+  144  ls /dev/mapper/encryptednvme0n2p1
+  145  yum install clevis clevis-luks clevis-dracut
+  146  cfg=$'{"t":2,"pins":{"tang":[\n {"url":"192.168.1.214"},\n {"url":"192.168.1.172"}]}}'
+  147  clevis luks bind -d /dev/nvme0n2p1 sss "$cfg
+  148  clevis luks bind -d /dev/nvme0n2p1 sss "$cfg"
+  149  systemctl enable clevis-luks-askpass.path
+  150  clevis luks bind -d /dev/nvme0n2p1 sss "$cfg"
+  151  vi /etc/crypttab
+  152  vi /etc/fstab
+  153  history
+[root@ansible-node01 iqbal]# parted -l
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n1: 42.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  1075MB  1074MB  primary  xfs          boot
+ 2      1075MB  42.9GB  41.9GB  primary               lvm
+
+
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n2: 10.7GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  10.0GB  9999MB  primary
+
+
+Error: /dev/nvme0n3: unrecognised disk label
+Model: VMware Virtual NVMe Disk (nvme)
+Disk /dev/nvme0n3: 10.7GB
+Sector size (logical/physical): 512B/512B
+Partition Table: unknown
+Disk Flags:
+
+[root@ansible-node01 iqbal]# fstab
+bash: fstab: command not found
+[root@ansible-node01 iqbal]# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0          11:0    1 1024M  0 rom
+nvme0n1     259:0    0   40G  0 disk
++-nvme0n1p1 259:1    0    1G  0 part /boot
++-nvme0n1p2 259:2    0   39G  0 part
+  +-rl-root 253:0    0   37G  0 lvm  /
+  +-rl-swap 253:1    0    2G  0 lvm  [SWAP]
+nvme0n2     259:3    0   10G  0 disk
++-nvme0n2p1 259:6    0  9.3G  0 part
+nvme0n3     259:4    0   10G  0 disk
+[root@ansible-node01 iqbal]#
